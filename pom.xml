@@ -9,10 +9,10 @@
 		<version>3.3.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.blog</groupId>
+	<groupId>com.yamaha</groupId>
 	<artifactId>YAMAHA</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>BLOG-APPLICATION-1</name>
+	<name>OnlineAPPLICATION</name>
 	<description>Application tutorial Spring Boot</description>
 	<url />
 	<licenses>
