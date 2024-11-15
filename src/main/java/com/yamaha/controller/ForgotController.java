@@ -81,10 +81,12 @@ public class ForgotController {
 	@PostMapping("/verify")
 	public String verify(@RequestParam int otp, @RequestParam String enteredotp,@RequestParam String mail,HttpSession session,Model m) {		
 		//change password
+		  if (enteredotp != null && !enteredotp.isEmpty()) {
 		if(otp == Integer.parseInt(enteredotp)){
 			m.addAttribute("mail",mail);
 			return "changepassword";
 		}	
+		}
 	    session.setAttribute("message", new MessageHelper("Please enter valid OtP","alert-danger"));
 		return "verifyOtp";
 	}

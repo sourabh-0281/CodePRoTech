@@ -330,12 +330,12 @@ public class UserController {
       
       
       //PAYMENT-CREATING ORDER      
-      @PostMapping("create_order")
+      @PostMapping("/create_order")
       @ResponseBody
       public String createorder(@RequestBody Map<String,Object> data,Principal p) throws Exception {
     	  
     	  User user = userrepo.findByEmail(p.getName());
-    	  double amt=(double)data.get("amount");
+    	  double amt=Double.parseDouble(data.get("amount").toString());
     	   RazorpayClient razorpayClient = new RazorpayClient("rzp_test_epfZlkjtEtSgVY" , "wC888Byp7KxY1ILsxuNtbshI");
     	   JSONObject obj=new JSONObject();
     	   obj.put("amount", amt*100);

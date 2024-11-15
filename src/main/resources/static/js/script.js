@@ -98,6 +98,7 @@ const paymentstart=(totalamt)=>{
     )
  };
 
+//SEARCH QUERY
  const search=()=>{
     let query=$("#searchinput").val();
 
